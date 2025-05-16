@@ -1,0 +1,267 @@
+/* styles.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0d6efd;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #dbe9ff;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(11, 94, 215, 0.8)),
+              url('https://source.unsplash.com/1600x600/?shopping,ecommerce') no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;        /* add horizontal padding */
+  color: #fff;
+  display: flex;              /* flex container */
+  flex-direction: column;
+  justify-content: center;    /* vertical centering */
+  align-items: center;        /* horizontal centering */
+  text-align: center;         /* center text inside */
+  min-height: 400px;          /* set a minimum height for visual balance */
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  max-width: 600px;
+}
+
+/* Responsive padding and font for Hero on mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Products Section */
+#products {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#products h2 {
+  color: #343a40;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#products p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Product Cards Container - Responsive Flexbox Grid */
+#products .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Each Card */
+#products .card {
+  flex: 1 1 300px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+#products .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Responsive adjustments for card image height on smaller devices */
+@media (max-width: 576px) {
+  .card img {
+    height: 150px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+footer a {
+  color: #cfe2ff;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Sticky Top for Navbar (if needed elsewhere) */
+.sticky-top {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1020;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-image: url('https://source.unsplash.com/1600x900/?store,shopping');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 60px 20px;
+  color: #212529;
+}
+
+.why-choose-us::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.why-choose-us .container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.why-choose-us .card {
+  background-color: #fff;
+  padding: 20px;
+  flex: 1 1 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.why-choose-us .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .why-choose-us .container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .why-choose-us .card {
+    max-width: 100%;
+  }
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
